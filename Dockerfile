@@ -1,2 +1,3 @@
 FROM hshar/webapp
-COPY * /var/www/html
+ADD index.html /var/www/html
+ADD images /var/www/html
