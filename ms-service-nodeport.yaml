@@ -8,7 +8,7 @@ spec:
     app: microservice-one
   ports:
     - protocol: TCP
-      port: 3200
+      port: 80
       targetPort: 80
       nodePort: 30008
 
