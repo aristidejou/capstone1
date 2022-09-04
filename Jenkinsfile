@@ -2,13 +2,13 @@ pipeline {
    agent any
    stages {
        stage('one') {
+                     when {
+                             expression { env.BRANCH_NAME != 'master'}
+                        echo "${env.BRANCH_NAME}"
+                       }
            steps {
-              echo "${env.BUILD_NUMBER}"
-              if (${env.BRANCH_NAME}=='master'){
-                 echo "${env.BRANCH_NAME}"
-              }else{
-                sh "echo 'it is master it is ${env.BRANCH_NAME} branch!'"
-              }
+              echo "${env.BRANCH_NAME}"
+             
            }
        }
       
