@@ -3,14 +3,12 @@ pipeline {
    stages {
        stage('one') {
            steps {
-            
                echo "hi my friend"
-               """
            }
        }
+      
       stage('two') {
           steps {
-              
               input('do you want to proceed?')
           }
       }
@@ -26,18 +24,7 @@ pipeline {
           }
       }
       
-       stage('four') {
-          steps {
-             parallel {
-             stage('unit test') {
-                               steps {
-                               echo "running the unit test...."
-                               }
-             
-             }
-             
-             }
-          }
-      }
+       
+      
    }
 }
