@@ -2,12 +2,11 @@ pipeline {
    agent any
    stages {
        stage('one') {
-                     when {
-                             expression { env.BRANCH_NAME != 'master'}
                     
-                       }
            steps {
-              echo "${env.BRANCH_NAME}"
+              withEnv(['BRANCH_NAME="master"']) {
+              echo "master"
+              }
              
            }
        }
