@@ -35,17 +35,7 @@ pipeline {
                                }
              
              }
-             stage('integration test'){
-                                    agent {
-                                    docker {
-                                         reuseNode false
-                                         image 'ubuntu'
-                                    }
-                                    }
-                                    steps{
-                                    echo 'running the integration test...'
-                                    }
-             }
+             
              }
           }
       }
