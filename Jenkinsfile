@@ -7,7 +7,9 @@ pipeline {
               withEnv(['BRANCH_NAME="master"']) {
               echo "master"
               }
-             
+             withEnv(['BRANCH_NAME="develop"']) {
+              echo "develop"
+              }
            }
        }
       
