@@ -3,6 +3,7 @@ pipeline {
    stages {
        stage('one') {
            steps {
+              echo $BUILD_NUMBER
                echo "hi my friendssdsd noe"
            }
        }
