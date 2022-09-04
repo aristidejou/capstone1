@@ -4,7 +4,7 @@ pipeline {
        stage('one') {
                      when {
                              expression { env.BRANCH_NAME != 'master'}
-                        echo "${BRANCH_NAME}"
+                        echo "develop"
                        }
            steps {
               echo "${env.BRANCH_NAME}"
