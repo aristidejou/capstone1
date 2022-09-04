@@ -4,7 +4,11 @@ pipeline {
        stage('one') {
            steps {
               echo "${env.BUILD_NUMBER}"
-               echo "hi my friendssdsd noe"
+              if (env.BRANCH_NAME=='master'){
+                 echo "${env.BRANCH_NAME}"
+              }else{
+                sh "echo 'it is master it is ${env.BRANCH_NAME} branch!'"
+              }
            }
        }
       
